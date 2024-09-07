@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Lock_ProDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_LockList">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cu_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="cu_mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="serial_num" Type="nvarchar" MaxLength="50" />
+          <Property Name="identity_num" Type="int" />
+          <Property Name="lock_num" Type="nvarchar" MaxLength="50" />
+          <Property Name="fix_num1" Type="int" />
+          <Property Name="fix_num2" Type="int" />
+          <Property Name="lock_date" Type="nvarchar" MaxLength="50" />
+          <Property Name="lock_count" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_ProSerial">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ProSerial" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProDate" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fix_num1" Type="int" />
+          <Property Name="Fix_num2" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_Software">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Fix_num1" Type="int" />
+          <Property Name="Fix_num2" Type="int" />
+        </EntityType>
+        <EntityContainer Name="Lock_ProDBModelStoreContainer">
+          <EntitySet Name="tbl_LockList" EntityType="Self.tbl_LockList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_ProSerial" EntityType="Self.tbl_ProSerial" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Software" EntityType="Self.tbl_Software" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Lock_ProDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_ProSerial">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ProSerial" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fix_num1" Type="Int32" />
+          <Property Name="Fix_num2" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_Software">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ProName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Fix_num1" Type="Int32" />
+          <Property Name="Fix_num2" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="Lock_ProDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_ProSerial" EntityType="Self.tbl_ProSerial" />
+          <EntitySet Name="tbl_Software" EntityType="Self.tbl_Software" />
+          <EntitySet Name="tbl_LockList" EntityType="Lock_ProDBModel.tbl_LockList" />
+        </EntityContainer>
+        <EntityType Name="tbl_LockList">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cu_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cu_mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="serial_num" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="identity_num" Type="Int32" />
+          <Property Name="lock_num" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fix_num1" Type="Int32" />
+          <Property Name="fix_num2" Type="Int32" />
+          <Property Name="lock_date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="lock_count" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Lock_ProDBModelStoreContainer" CdmEntityContainer="Lock_ProDBEntities">
+          <EntitySetMapping Name="tbl_ProSerial">
+            <EntityTypeMapping TypeName="Lock_ProDBModel.tbl_ProSerial">
+              <MappingFragment StoreEntitySet="tbl_ProSerial">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProName" ColumnName="ProName" />
+                <ScalarProperty Name="ProSerial" ColumnName="ProSerial" />
+                <ScalarProperty Name="ProDate" ColumnName="ProDate" />
+                <ScalarProperty Name="Fix_num1" ColumnName="Fix_num1" />
+                <ScalarProperty Name="Fix_num2" ColumnName="Fix_num2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Software">
+            <EntityTypeMapping TypeName="Lock_ProDBModel.tbl_Software">
+              <MappingFragment StoreEntitySet="tbl_Software">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProName" ColumnName="ProName" />
+                <ScalarProperty Name="Fix_num1" ColumnName="Fix_num1" />
+                <ScalarProperty Name="Fix_num2" ColumnName="Fix_num2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_LockList">
+            <EntityTypeMapping TypeName="Lock_ProDBModel.tbl_LockList">
+              <MappingFragment StoreEntitySet="tbl_LockList">
+                <ScalarProperty Name="lock_count" ColumnName="lock_count" />
+                <ScalarProperty Name="lock_date" ColumnName="lock_date" />
+                <ScalarProperty Name="fix_num2" ColumnName="fix_num2" />
+                <ScalarProperty Name="fix_num1" ColumnName="fix_num1" />
+                <ScalarProperty Name="lock_num" ColumnName="lock_num" />
+                <ScalarProperty Name="identity_num" ColumnName="identity_num" />
+                <ScalarProperty Name="serial_num" ColumnName="serial_num" />
+                <ScalarProperty Name="cu_mobile" ColumnName="cu_mobile" />
+                <ScalarProperty Name="cu_name" ColumnName="cu_name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Lock_ProDBModelStoreContainer" CdmEntityContainer="Lock_ProDBEntities">
+    <EntitySetMapping Name="tbl_ProSerial">
+      <EntityTypeMapping TypeName="Lock_ProDBModel.tbl_ProSerial">
+        <MappingFragment StoreEntitySet="tbl_ProSerial">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProName" ColumnName="ProName" />
+          <ScalarProperty Name="ProSerial" ColumnName="ProSerial" />
+          <ScalarProperty Name="ProDate" ColumnName="ProDate" />
+          <ScalarProperty Name="Fix_num1" ColumnName="Fix_num1" />
+          <ScalarProperty Name="Fix_num2" ColumnName="Fix_num2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Software">
+      <EntityTypeMapping TypeName="Lock_ProDBModel.tbl_Software">
+        <MappingFragment StoreEntitySet="tbl_Software">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProName" ColumnName="ProName" />
+          <ScalarProperty Name="Fix_num1" ColumnName="Fix_num1" />
+          <ScalarProperty Name="Fix_num2" ColumnName="Fix_num2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_LockList">
+      <EntityTypeMapping TypeName="Lock_ProDBModel.tbl_LockList">
+        <MappingFragment StoreEntitySet="tbl_LockList">
+          <ScalarProperty Name="lock_count" ColumnName="lock_count" />
+          <ScalarProperty Name="lock_date" ColumnName="lock_date" />
+          <ScalarProperty Name="fix_num2" ColumnName="fix_num2" />
+          <ScalarProperty Name="fix_num1" ColumnName="fix_num1" />
+          <ScalarProperty Name="lock_num" ColumnName="lock_num" />
+          <ScalarProperty Name="identity_num" ColumnName="identity_num" />
+          <ScalarProperty Name="serial_num" ColumnName="serial_num" />
+          <ScalarProperty Name="cu_mobile" ColumnName="cu_mobile" />
+          <ScalarProperty Name="cu_name" ColumnName="cu_name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,9 @@
+C:\Users\Behnam\Desktop\Lock_Generator\Lock_Generator\bin\Debug\Lock_Generator.exe.config
+C:\Users\Behnam\Desktop\Lock_Generator\Lock_Generator\bin\Debug\Lock_Generator.exe
+C:\Users\Behnam\Desktop\Lock_Generator\Lock_Generator\bin\Debug\Lock_Generator.pdb
+C:\Users\Behnam\Desktop\Lock_Generator\Lock_Generator\obj\Debug\Lock_Generator.Form1.resources
+C:\Users\Behnam\Desktop\Lock_Generator\Lock_Generator\obj\Debug\Lock_Generator.Properties.Resources.resources
+C:\Users\Behnam\Desktop\Lock_Generator\Lock_Generator\obj\Debug\Lock_Generator.csproj.GenerateResource.Cache
+C:\Users\Behnam\Desktop\Lock_Generator\Lock_Generator\obj\Debug\Lock_Generator.exe
+C:\Users\Behnam\Desktop\Lock_Generator\Lock_Generator\obj\Debug\Lock_Generator.pdb
+C:\Users\Behnam\Desktop\Lock_Generator\Lock_Generator\obj\Debug\Lock_Generator.csprojResolveAssemblyReference.cache

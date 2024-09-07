@@ -1,0 +1,10 @@
+C:\Users\Behnam\Desktop\Soft_Lock_Project\Soft_Lock_Project\bin\Debug\GetDiskSerial.dll
+C:\Users\Behnam\Desktop\Soft_Lock_Project\Soft_Lock_Project\obj\Debug\Soft_Lock_Project.csproj.GenerateResource.Cache
+C:\Users\Behnam\Desktop\Soft_Lock_Project\Soft_Lock_Project\obj\Debug\Soft_Lock_Project.Main_Form.resources
+C:\Users\Behnam\Desktop\Soft_Lock_Project\Soft_Lock_Project\bin\Debug\resolution_changer.pdb
+C:\Users\Behnam\Desktop\Soft_Lock_Project\Soft_Lock_Project\obj\Debug\resolution_changer_sn.Properties.Resources.resources
+C:\Users\Behnam\Desktop\Soft_Lock_Project\Soft_Lock_Project\obj\Debug\resolution_changer.pdb
+C:\Users\Behnam\Desktop\Soft_Lock_Project\Soft_Lock_Project\obj\Debug\resolution_changer.Form1.resources
+C:\Users\Behnam\Desktop\Soft_Lock_Project\Soft_Lock_Project\bin\Debug\resolution_changer.dll.config
+C:\Users\Behnam\Desktop\Soft_Lock_Project\Soft_Lock_Project\bin\Debug\resolution_changer.dll
+C:\Users\Behnam\Desktop\Soft_Lock_Project\Soft_Lock_Project\obj\Debug\resolution_changer.dll

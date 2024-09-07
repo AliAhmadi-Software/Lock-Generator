@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Lock_ProDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_LockList">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cu_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="cu_mobile" Type="nvarchar" MaxLength="50" />
+    <Property Name="serial_num" Type="nvarchar" MaxLength="50" />
+    <Property Name="identity_num" Type="int" />
+    <Property Name="lock_num" Type="nvarchar" MaxLength="50" />
+    <Property Name="fix_num1" Type="int" />
+    <Property Name="fix_num2" Type="int" />
+    <Property Name="lock_date" Type="nvarchar" MaxLength="50" />
+    <Property Name="lock_count" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_ProSerial">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ProSerial" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fix_num1" Type="int" />
+    <Property Name="Fix_num2" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_Software">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Fix_num1" Type="int" />
+    <Property Name="Fix_num2" Type="int" />
+  </EntityType>
+  <EntityContainer Name="Lock_ProDBModelStoreContainer">
+    <EntitySet Name="tbl_LockList" EntityType="Self.tbl_LockList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_ProSerial" EntityType="Self.tbl_ProSerial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Software" EntityType="Self.tbl_Software" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

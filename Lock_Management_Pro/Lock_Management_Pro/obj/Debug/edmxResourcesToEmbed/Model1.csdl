@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Lock_ProDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbl_ProSerial">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProSerial" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fix_num1" Type="Int32" />
+    <Property Name="Fix_num2" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_Software">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ProName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Fix_num1" Type="Int32" />
+    <Property Name="Fix_num2" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="Lock_ProDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_ProSerial" EntityType="Self.tbl_ProSerial" />
+    <EntitySet Name="tbl_Software" EntityType="Self.tbl_Software" />
+    <EntitySet Name="tbl_LockList" EntityType="Lock_ProDBModel.tbl_LockList" />
+  </EntityContainer>
+  <EntityType Name="tbl_LockList">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cu_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cu_mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="serial_num" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="identity_num" Type="Int32" />
+    <Property Name="lock_num" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fix_num1" Type="Int32" />
+    <Property Name="fix_num2" Type="Int32" />
+    <Property Name="lock_date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="lock_count" Type="Int32" />
+  </EntityType>
+</Schema>
